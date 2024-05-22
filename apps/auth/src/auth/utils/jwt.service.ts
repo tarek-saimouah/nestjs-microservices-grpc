@@ -1,4 +1,4 @@
-import { JwtDecodedEntity } from '@app/grpc';
+import { JwtDecodedEntity } from '@app/common';
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';

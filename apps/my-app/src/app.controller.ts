@@ -8,7 +8,7 @@ import {
 } from '@nestjs/swagger';
 import { MessageResponseDto } from './dto';
 import { DecodedUser, JwtGuard } from '@app/common';
-import { JwtDecodedEntity } from '@app/grpc';
+import { JwtDecodedEntity } from '@app/common';
 
 @ApiTags('app')
 @Controller('app')

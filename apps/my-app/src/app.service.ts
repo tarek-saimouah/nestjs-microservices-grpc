@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { MessageResponseDto } from './dto';
-import { JwtDecodedEntity } from '@app/grpc';
+import { JwtDecodedEntity } from '@app/common';
 
 @Injectable()
 export class AppService {
