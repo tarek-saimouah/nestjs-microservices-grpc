@@ -12,6 +12,12 @@ class EnvironmentVariables {
   @Type(() => Number)
   @IsOptional()
   PORT?: number;
+
+  // microservice
+
+  @IsString()
+  @IsOptional()
+  AUTH_MICROSERVICE_URL?: string;
 }
 
 export function validateEnv(config: Record<string, unknown>) {
