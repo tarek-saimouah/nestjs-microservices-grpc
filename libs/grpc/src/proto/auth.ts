@@ -19,7 +19,7 @@ export interface DecodedUserResponseRPCDto {
   email: string;
 }
 
-export interface ValidateTokenResponseUserRPCDto {
+export interface ValidateTokenResponseRPCDto {
   user?: DecodedUserResponseRPCDto | undefined;
   empty?: Empty | undefined;
 }
@@ -30,16 +30,13 @@ export interface Empty {
 export const AUTH_PACKAGE_NAME = "auth";
 
 export interface RpcAuthServiceClient {
-  validateUserTokenRpc(request: ValidateTokenRequestRPCDto): Observable<ValidateTokenResponseUserRPCDto>;
+  validateUserTokenRpc(request: ValidateTokenRequestRPCDto): Observable<ValidateTokenResponseRPCDto>;
 }
 
 export interface RpcAuthServiceController {
   validateUserTokenRpc(
     request: ValidateTokenRequestRPCDto,
-  ):
-    | Promise<ValidateTokenResponseUserRPCDto>
-    | Observable<ValidateTokenResponseUserRPCDto>
-    | ValidateTokenResponseUserRPCDto;
+  ): Promise<ValidateTokenResponseRPCDto> | Observable<ValidateTokenResponseRPCDto> | ValidateTokenResponseRPCDto;
 }
 
 export function RpcAuthServiceControllerMethods() {

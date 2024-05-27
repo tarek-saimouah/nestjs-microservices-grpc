@@ -6,7 +6,7 @@ import {
 import { HashingService, JwtServiceUtils } from './utils';
 import { UsersService } from '../users';
 import { SignUpRequestDto, SigninRequestDto, SigninResponseDto } from './dto';
-import { ValidateTokenResponseUserRPCDto } from '@app/grpc';
+import { ValidateTokenResponseRPCDto } from '@app/grpc';
 
 @Injectable()
 export class AuthService {
@@ -87,7 +87,7 @@ export class AuthService {
 
   async validateUserTokenRpc(
     token: string,
-  ): Promise<ValidateTokenResponseUserRPCDto> {
+  ): Promise<ValidateTokenResponseRPCDto> {
     if (!token) {
       return {
         empty: {},

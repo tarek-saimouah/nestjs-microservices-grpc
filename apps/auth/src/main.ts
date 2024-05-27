@@ -13,7 +13,7 @@ import { join } from 'path';
 import { AUTH_PACKAGE_NAME } from '@app/grpc';
 
 async function bootstrap() {
-  // create hyberd app
+  // create hybrid app
 
   // create http server
   const app = await NestFactory.create(AppModule, { bufferLogs: true });

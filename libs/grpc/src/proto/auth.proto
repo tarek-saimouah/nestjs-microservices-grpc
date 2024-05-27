@@ -3,7 +3,7 @@ syntax = 'proto3';
 package auth;
 
 service RpcAuthService {
-  rpc ValidateUserTokenRPC (ValidateTokenRequestRPCDto) returns (ValidateTokenResponseUserRPCDto) {};
+  rpc ValidateUserTokenRPC (ValidateTokenRequestRPCDto) returns (ValidateTokenResponseRPCDto) {};
 }
 
 message ValidateTokenRequestRPCDto {
@@ -15,7 +15,7 @@ message DecodedUserResponseRPCDto {
   string email = 2;
 }
 
-message ValidateTokenResponseUserRPCDto {
+message ValidateTokenResponseRPCDto {
   oneof response {
     DecodedUserResponseRPCDto user = 1;
     Empty empty = 2;

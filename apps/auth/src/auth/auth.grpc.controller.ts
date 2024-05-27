@@ -2,7 +2,7 @@ import {
   RpcAuthServiceController,
   RpcAuthServiceControllerMethods,
   ValidateTokenRequestRPCDto,
-  ValidateTokenResponseUserRPCDto,
+  ValidateTokenResponseRPCDto,
 } from '@app/grpc';
 import { Controller, Injectable } from '@nestjs/common';
 import { Observable } from 'rxjs';
@@ -17,9 +17,9 @@ export class AuthGrpcController implements RpcAuthServiceController {
   validateUserTokenRpc(
     request: ValidateTokenRequestRPCDto,
   ):
-    | ValidateTokenResponseUserRPCDto
-    | Observable<ValidateTokenResponseUserRPCDto>
-    | Promise<ValidateTokenResponseUserRPCDto> {
+    | ValidateTokenResponseRPCDto
+    | Observable<ValidateTokenResponseRPCDto>
+    | Promise<ValidateTokenResponseRPCDto> {
     return this.authService.validateUserTokenRpc(request.token);
   }
 }

@@ -12,7 +12,7 @@ import { firstValueFrom } from 'rxjs';
 import {
   RPC_AUTH_SERVICE_NAME,
   RpcAuthServiceClient,
-  ValidateTokenResponseUserRPCDto,
+  ValidateTokenResponseRPCDto,
 } from '@app/grpc';
 import { PUBLIC_KEY } from '../decorators';
 
@@ -51,7 +51,7 @@ export class JwtGuard extends AuthGuard('jwt') implements OnModuleInit {
         return true;
       }
 
-      const decodedUser: ValidateTokenResponseUserRPCDto = await firstValueFrom(
+      const decodedUser: ValidateTokenResponseRPCDto = await firstValueFrom(
         this.authGrpcService.validateUserTokenRpc({
           token,
         }),
