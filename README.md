@@ -46,4 +46,4 @@ $ pnpm install
 $ pnpm run start:dev
 ```
 
-- Visit http://localhost:3001/api-docs for the auth microservice and http://localhost:3000/api-docs for the my-app microservice.
+- Visit http://localhost:3001/api-docs for the `auth` microservice Swagger docs and http://localhost:3000/api-docs for the `my-app` microservice Swagger docs.
