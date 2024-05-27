@@ -35,7 +35,7 @@ This project is presented for an article I wrote on <strong>Medium</strong>, pro
 
   - AUTH_MICROSERVICE_URL (default: localhost:5000)
 
-  - create .env file in the root directory of the `my-app` app at `apps/mau-app` and fill the needed environment variables:
+  - create .env file in the root directory of the `my-app` app at `apps/my-app` and fill the needed environment variables:
 
   - AUTH_MICROSERVICE_URL (default: localhost:5000)
 
